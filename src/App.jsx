@@ -7,8 +7,9 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import Dashboard from './Components/Dashboard';
-import Profile from './Components/Profile'; 
-import CareerPath from './Components/CareerPath'; 
+import Profile from './Components/Profile';
+import CareerPath from './Components/CareerPath';
+import BottomNavBar from './Components/BottomNavBar';
 
 const theme = createTheme({
   palette: {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/career-path" element={<CareerPath />} />
         </Routes>
+        <BottomNavBar />
       </Router>
     </ThemeProvider>
   );
