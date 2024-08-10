@@ -1,6 +1,6 @@
 import React from 'react';
-import { BottomNavigation, BottomNavigationAction, useMediaQuery, Paper } from '@mui/material';
-import { Home, Dashboard, Person, Roadmap } from '@mui/icons-material';
+import { BottomNavigation, BottomNavigationAction, Paper } from '@mui/material';
+import { Home, Dashboard as DashboardIcon, Person, Timeline } from '@mui/icons-material'; // Import valid icons
 import { Link as RouterLink } from 'react-router-dom';
 import { styled } from '@mui/system';
 
@@ -19,9 +19,8 @@ const BottomNav = styled(BottomNavigation)(({ theme }) => ({
 
 function BottomNavBar() {
   const [value, setValue] = React.useState(0);
-  const isMobile = useMediaQuery(theme => theme.breakpoints.down('md'));
 
-  return isMobile ? (
+  return (
     <Paper elevation={3}>
       <BottomNav value={value} onChange={(event, newValue) => setValue(newValue)} showLabels>
         <BottomNavigationAction
@@ -32,7 +31,7 @@ function BottomNavBar() {
         />
         <BottomNavigationAction
           label="Dashboard"
-          icon={<Dashboard />}
+          icon={<DashboardIcon />}
           component={StyledLink}
           to="/dashboard"
         />
@@ -44,13 +43,13 @@ function BottomNavBar() {
         />
         <BottomNavigationAction
           label="Career Path"
-          icon={<Roadmap />}
+          icon={<Timeline />}
           component={StyledLink}
           to="/career-path"
         />
       </BottomNav>
     </Paper>
-  ) : null;
+  );
 }
 
 export default BottomNavBar;

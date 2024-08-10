@@ -9,7 +9,7 @@ import Navbar from './Components/Navbar';
 import Dashboard from './Components/Dashboard';
 import Profile from './Components/Profile';
 import CareerPath from './Components/CareerPath';
-import BottomNavBar from './Components/BottomNavBar';
+import BottomNavBar from './Components/BottomNavBar'; // Ensure this path is correct
 
 const theme = createTheme({
   palette: {
